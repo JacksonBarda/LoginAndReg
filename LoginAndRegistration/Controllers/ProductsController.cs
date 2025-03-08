@@ -8,5 +8,15 @@ namespace LoginAndRegistration.Controllers
         {
             return View();
         }
-    }
+        public IActionResult Message()
+		{
+			return View();
+		}
+        public IActionResult Welcome(string name, int secretNumber = 13)
+		{
+            ViewBag.Name = name;
+			ViewBag.SecretNumber = secretNumber;
+			return View();
+		}
+	}
 }
